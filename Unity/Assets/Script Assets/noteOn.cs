@@ -11,7 +11,7 @@ public class noteOn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	startNote();
+	Invoke("startNote",0.1f);
 
 	}
 	
@@ -22,7 +22,7 @@ public class noteOn : MonoBehaviour {
 
 	void startNote (){
 
-		helmController.NoteOn(midiNote, velocity, 5.0f);
+		helmController.NoteOn(midiNote, velocity);
 
 	}
 }

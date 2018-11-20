@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 140842746}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.524}
-  m_LocalScale: {x: 0.047517136, y: 0.047517136, z: 0.047517136}
+  m_LocalScale: {x: 0.04541444, y: 0.04541444, z: 0.04541444}
   m_Children: []
   m_Father: {fileID: 651401957}
   m_RootOrder: 4
@@ -226,7 +226,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243611197632573666, guid: 4a0019be9c72a4063a1a8ecaa180e005,
     type: 2}
-  m_audioClip: {fileID: 1701683613}
+  m_audioClip: {fileID: 583736687}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -362,166 +362,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 140842746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03c2100a494de423e9975762c775cfac, type: 3}
+  m_Script: {fileID: 11500000, guid: d7bb692ea8f9042118e2ad15fdee914a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteOnEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  noteOffEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  beatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+BeatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  length: 1
-  currentIndex: -1
-  loop: 1
-  allNotes:
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes:
-    - note_: 64
-      start_: 0
-      end_: 1
-      velocity_: 0.8
-      parent: {fileID: 140842755}
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  scrollPosition: {x: 0, y: 411.8164}
-  autoScroll: 0
-  division: 1
-  zoom: 0.3
-  channel: 4
+  helmController: {fileID: 140842753}
+  midiNote: 68
+  velocity: 1
 --- !u!1 &147888501
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +383,7 @@ GameObject:
   - component: {fileID: 147888507}
   - component: {fileID: 147888509}
   - component: {fileID: 147888508}
-  - component: {fileID: 147888510}
+  - component: {fileID: 147888511}
   m_Layer: 0
   m_Name: Mercury
   m_TagString: Planet
@@ -553,7 +399,7 @@ Transform:
   m_GameObject: {fileID: 147888501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.39}
-  m_LocalScale: {x: 0.034123655, y: 0.034123655, z: 0.034123655}
+  m_LocalScale: {x: 0.032613635, y: 0.032613635, z: 0.032613635}
   m_Children: []
   m_Father: {fileID: 651401957}
   m_RootOrder: 1
@@ -635,7 +481,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243070096374682608, guid: 4a0019be9c72a4063a1a8ecaa180e005,
     type: 2}
-  m_audioClip: {fileID: 1884156681}
+  m_audioClip: {fileID: 301195396}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -763,7 +609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   synthesizerMixerGroup: {fileID: 0}
   spatializerMixerGroup: {fileID: 0}
---- !u!114 &147888510
+--- !u!114 &147888511
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -771,167 +617,67 @@ MonoBehaviour:
   m_GameObject: {fileID: 147888501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03c2100a494de423e9975762c775cfac, type: 3}
+  m_Script: {fileID: 11500000, guid: d7bb692ea8f9042118e2ad15fdee914a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteOnEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  noteOffEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  beatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+BeatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  length: 1
-  currentIndex: -1
-  loop: 1
-  allNotes:
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes:
-    - note_: 52
-      start_: 0
-      end_: 1
-      velocity_: 0.8
-      parent: {fileID: 147888510}
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  scrollPosition: {x: 0, y: 502.65472}
-  autoScroll: 0
-  division: 1
-  zoom: 0.3
-  channel: 1
---- !u!83 &252225399
+  helmController: {fileID: 147888508}
+  midiNote: 32
+  velocity: 1
+--- !u!83 &201824738
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 44100
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
+--- !u!83 &301195396
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 44100
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
+--- !u!83 &305350749
 AudioClip:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -963,6 +709,60 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 20930419476179368, guid: 0dcac3906760941bf9f5335ac0ddb11f,
     type: 2}
   m_PrefabInternal: {fileID: 1855910081}
+--- !u!83 &581123783
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 44100
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
+--- !u!83 &583736687
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 44100
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
 --- !u!1 &638394892
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,7 +794,7 @@ Transform:
   m_GameObject: {fileID: 638394892}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 19.18}
-  m_LocalScale: {x: 0.03672414, y: 0.03672414, z: 0.03672414}
+  m_LocalScale: {x: 0.34171122, y: 0.34171122, z: 0.34171122}
   m_Children: []
   m_Father: {fileID: 651401957}
   m_RootOrder: 7
@@ -1076,7 +876,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243306423278213878, guid: 4a0019be9c72a4063a1a8ecaa180e005,
     type: 2}
-  m_audioClip: {fileID: 1176864082}
+  m_audioClip: {fileID: 201824738}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1212,166 +1012,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 638394892}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03c2100a494de423e9975762c775cfac, type: 3}
+  m_Script: {fileID: 11500000, guid: d7bb692ea8f9042118e2ad15fdee914a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteOnEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  noteOffEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  beatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+BeatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  length: 1
-  currentIndex: -1
-  loop: 1
-  allNotes:
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes:
-    - note_: 88
-      start_: 0
-      end_: 1
-      velocity_: 0.8
-      parent: {fileID: 638394901}
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  scrollPosition: {x: 0, y: 372.34497}
-  autoScroll: 0
-  division: 1
-  zoom: 0.3
-  channel: 7
+  helmController: {fileID: 638394899}
+  midiNote: 104
+  velocity: 1
 --- !u!1 &651401956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,7 +1055,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!83 &709552674
+--- !u!83 &813696024
 AudioClip:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1467,7 +1113,7 @@ Transform:
   m_GameObject: {fileID: 877420503}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 30.06}
-  m_LocalScale: {x: 0.035581898, y: 0.035581898, z: 0.035581898}
+  m_LocalScale: {x: 0.33108288, y: 0.33108288, z: 0.33108288}
   m_Children: []
   m_Father: {fileID: 651401957}
   m_RootOrder: 8
@@ -1549,7 +1195,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243502021837726104, guid: 4a0019be9c72a4063a1a8ecaa180e005,
     type: 2}
-  m_audioClip: {fileID: 1914387615}
+  m_audioClip: {fileID: 1582807598}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1685,167 +1331,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 877420503}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03c2100a494de423e9975762c775cfac, type: 3}
+  m_Script: {fileID: 11500000, guid: d7bb692ea8f9042118e2ad15fdee914a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteOnEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  noteOffEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  beatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+BeatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  length: 1
-  currentIndex: -1
-  loop: 1
-  allNotes:
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes:
-    - note_: 91
-      start_: 0
-      end_: 1
-      velocity_: 0.8
-      parent: {fileID: 877420512}
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  scrollPosition: {x: 0, y: 0}
-  autoScroll: 0
-  division: 1
-  zoom: 0.3
-  channel: 8
---- !u!83 &1176864082
+  helmController: {fileID: 877420510}
+  midiNote: 116
+  velocity: 1
+--- !u!83 &1101945278
 AudioClip:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1903,7 +1395,7 @@ Transform:
   m_GameObject: {fileID: 1203198136}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 0.08921528, y: 0.08921528, z: 0.08921528}
+  m_LocalScale: {x: 0.08526738, y: 0.08526738, z: 0.08526738}
   m_Children: []
   m_Father: {fileID: 651401957}
   m_RootOrder: 3
@@ -1985,7 +1477,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243768054862712022, guid: 4a0019be9c72a4063a1a8ecaa180e005,
     type: 2}
-  m_audioClip: {fileID: 252225399}
+  m_audioClip: {fileID: 305350749}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2121,193 +1613,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1203198136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03c2100a494de423e9975762c775cfac, type: 3}
+  m_Script: {fileID: 11500000, guid: d7bb692ea8f9042118e2ad15fdee914a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteOnEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  noteOffEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  beatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+BeatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  length: 1
-  currentIndex: -1
-  loop: 1
-  allNotes:
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes:
-    - note_: 59
-      start_: 0
-      end_: 1
-      velocity_: 0.8
-      parent: {fileID: 1203198145}
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  scrollPosition: {x: 0, y: 448.86353}
-  autoScroll: 0
-  division: 1
-  zoom: 0.3
-  channel: 3
---- !u!83 &1320780561
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: helm
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 44100
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
+  helmController: {fileID: 1203198143}
+  midiNote: 56
+  velocity: 1
 --- !u!1001 &1412053759
 Prefab:
   m_ObjectHideFlags: 0
@@ -2386,7 +1697,7 @@ Transform:
   m_GameObject: {fileID: 1556470783}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.723}
-  m_LocalScale: {x: 0.084655195, y: 0.084655195, z: 0.084655195}
+  m_LocalScale: {x: 0.08090909, y: 0.08090909, z: 0.08090909}
   m_Children: []
   m_Father: {fileID: 651401957}
   m_RootOrder: 2
@@ -2468,7 +1779,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243209351136582672, guid: 4a0019be9c72a4063a1a8ecaa180e005,
     type: 2}
-  m_audioClip: {fileID: 1928222542}
+  m_audioClip: {fileID: 581123783}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2604,166 +1915,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1556470783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03c2100a494de423e9975762c775cfac, type: 3}
+  m_Script: {fileID: 11500000, guid: d7bb692ea8f9042118e2ad15fdee914a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteOnEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  noteOffEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  beatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+BeatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  length: 1
-  currentIndex: -1
-  loop: 1
-  allNotes:
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes:
-    - note_: 55
-      start_: 0
-      end_: 1
-      velocity_: 0.8
-      parent: {fileID: 1556470792}
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  scrollPosition: {x: 0, y: 579.93896}
-  autoScroll: 0
-  division: 1
-  zoom: 0.3
-  channel: 2
+  helmController: {fileID: 1556470790}
+  midiNote: 44
+  velocity: 1
 --- !u!1 &1577142282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2795,7 +1952,7 @@ Transform:
   m_GameObject: {fileID: 1577142282}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5.203}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9557487, y: 0.9557487, z: 0.9557487}
   m_Children: []
   m_Father: {fileID: 651401957}
   m_RootOrder: 5
@@ -2877,7 +2034,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243393097212010446, guid: 4a0019be9c72a4063a1a8ecaa180e005,
     type: 2}
-  m_audioClip: {fileID: 1320780561}
+  m_audioClip: {fileID: 1101945278}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3013,166 +2170,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 1577142282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03c2100a494de423e9975762c775cfac, type: 3}
+  m_Script: {fileID: 11500000, guid: d7bb692ea8f9042118e2ad15fdee914a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteOnEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  noteOffEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  beatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+BeatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  length: 1
-  currentIndex: -1
-  loop: 1
-  allNotes:
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes:
-    - note_: 79
-      start_: 0
-      end_: 1
-      velocity_: 0.8
-      parent: {fileID: 1577142291}
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  scrollPosition: {x: 0, y: 314.55017}
-  autoScroll: 0
-  division: 1
-  zoom: 0.3
-  channel: 5
+  helmController: {fileID: 1577142289}
+  midiNote: 80
+  velocity: 1
+--- !u!83 &1582807598
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 44100
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
 --- !u!1 &1681914579
 GameObject:
   m_ObjectHideFlags: 0
@@ -3204,7 +2234,7 @@ Transform:
   m_GameObject: {fileID: 1681914579}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 9.539}
-  m_LocalScale: {x: 0.3464121, y: 0.3464121, z: 0.3464121}
+  m_LocalScale: {x: 0.80574864, y: 0.80574864, z: 0.80574864}
   m_Children: []
   m_Father: {fileID: 651401957}
   m_RootOrder: 6
@@ -3286,7 +2316,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243712595120297768, guid: 4a0019be9c72a4063a1a8ecaa180e005,
     type: 2}
-  m_audioClip: {fileID: 709552674}
+  m_audioClip: {fileID: 813696024}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3422,167 +2452,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1681914579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03c2100a494de423e9975762c775cfac, type: 3}
+  m_Script: {fileID: 11500000, guid: d7bb692ea8f9042118e2ad15fdee914a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteOnEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  noteOffEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+NoteEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  beatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: AudioHelm.Sequencer+BeatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  length: 1
-  currentIndex: -1
-  loop: 1
-  allNotes:
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes:
-    - note_: 84
-      start_: 0
-      end_: 1
-      velocity_: 0.8
-      parent: {fileID: 1681914588}
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  - notes: []
-  scrollPosition: {x: 0, y: 215.3357}
-  autoScroll: 0
-  division: 1
-  zoom: 0.3
-  channel: 6
---- !u!83 &1701683613
+  helmController: {fileID: 1681914586}
+  midiNote: 92
+  velocity: 1
+--- !u!83 &1797896112
 AudioClip:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3651,87 +2527,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dcac3906760941bf9f5335ac0ddb11f, type: 2}
   m_IsPrefabAsset: 0
---- !u!83 &1884156681
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: helm
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 44100
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
---- !u!83 &1914387615
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: helm
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 44100
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
---- !u!83 &1928222542
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: helm
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 44100
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
 --- !u!1 &2000023018
 GameObject:
   m_ObjectHideFlags: 0
@@ -3882,7 +2677,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243730008078836290, guid: 4a0019be9c72a4063a1a8ecaa180e005,
     type: 2}
-  m_audioClip: {fileID: 2024068564}
+  m_audioClip: {fileID: 1797896112}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -4136,33 +2931,6 @@ MonoBehaviour:
   division: 1
   zoom: 0.3
   channel: 0
---- !u!83 &2024068564
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: helm
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 44100
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
 --- !u!4 &2056933008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4183881815088346, guid: 0dcac3906760941bf9f5335ac0ddb11f,

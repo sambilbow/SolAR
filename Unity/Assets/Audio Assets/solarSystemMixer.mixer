@@ -1737,7 +1737,7 @@ AudioMixerGroupController:
   - {fileID: 244557609414141664}
   - {fileID: 244667449892476674}
   m_UserColorIndex: 0
-  m_Mute: 0
+  m_Mute: 1
   m_Solo: 0
   m_BypassEffects: 0
 --- !u!243 &243306423278213878
@@ -1755,7 +1755,7 @@ AudioMixerGroupController:
   - {fileID: 244704903209116804}
   - {fileID: 244937828869130394}
   m_UserColorIndex: 0
-  m_Mute: 0
+  m_Mute: 1
   m_Solo: 0
   m_BypassEffects: 0
 --- !u!243 &243393097212010446
@@ -1773,7 +1773,7 @@ AudioMixerGroupController:
   - {fileID: 244003740197435822}
   - {fileID: 244963679016766808}
   m_UserColorIndex: 0
-  m_Mute: 0
+  m_Mute: 1
   m_Solo: 0
   m_BypassEffects: 0
 --- !u!243 &243502021837726104
@@ -1791,7 +1791,7 @@ AudioMixerGroupController:
   - {fileID: 244860641234808430}
   - {fileID: 244646671230025290}
   m_UserColorIndex: 0
-  m_Mute: 0
+  m_Mute: 1
   m_Solo: 0
   m_BypassEffects: 0
 --- !u!243 &243611197632573666
@@ -1809,7 +1809,7 @@ AudioMixerGroupController:
   - {fileID: 244793728249438746}
   - {fileID: 244629249949879096}
   m_UserColorIndex: 0
-  m_Mute: 0
+  m_Mute: 1
   m_Solo: 0
   m_BypassEffects: 0
 --- !u!243 &243712595120297768
@@ -1827,7 +1827,7 @@ AudioMixerGroupController:
   - {fileID: 244031141081887816}
   - {fileID: 244167000049324602}
   m_UserColorIndex: 0
-  m_Mute: 0
+  m_Mute: 1
   m_Solo: 0
   m_BypassEffects: 0
 --- !u!243 &243730008078836290
@@ -1845,7 +1845,7 @@ AudioMixerGroupController:
   - {fileID: 244463618689412376}
   - {fileID: 244585564609965120}
   m_UserColorIndex: 1
-  m_Mute: 0
+  m_Mute: 1
   m_Solo: 0
   m_BypassEffects: 0
 --- !u!243 &243768054862712022
@@ -1863,7 +1863,7 @@ AudioMixerGroupController:
   - {fileID: 244854253286965916}
   - {fileID: 244440334855394264}
   m_UserColorIndex: 0
-  m_Mute: 0
+  m_Mute: 1
   m_Solo: 0
   m_BypassEffects: 0
 --- !u!244 &244003740197435822
