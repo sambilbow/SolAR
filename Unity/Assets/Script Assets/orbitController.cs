@@ -38,7 +38,7 @@ public class orbitController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-	this.transform.RotateAround(Vector3.zero,spinAxis,rotateSpeed);	
+	this.transform.RotateAround(Vector3.zero,spinAxis,(rotateSpeed*Time.deltaTime)*360);	
 
 	}
 
