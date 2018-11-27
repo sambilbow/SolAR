@@ -8,13 +8,9 @@ public class celestialProperties : MonoBehaviour {
 	// Define public variables and axis of spin.
 	
 	public string celestialName = "defaultName";
-	[Range(0.0f, 10.0f)]
 	public float celestialBodyDistance = 0f;
-	[Range(0.001f, 1000f)]
 	public float celestialOrbitFrequency = 1.0f;
-	[Range(0.001f, 1000f)]
 	public float celestialRotationalFrequency = 1.0f;
-	[Range(0.01f, 2f)]
 	public float celestialBodyDiameter = 0f;
 
 	public float celestialBodyTemperature = 0f;
