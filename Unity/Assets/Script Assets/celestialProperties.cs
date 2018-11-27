@@ -39,6 +39,13 @@ public class celestialProperties : MonoBehaviour {
 		// Place gameObject at random point on circle with y=0
 		this.gameObject.transform.position = new Vector3 (posX,0,posZ);
 
+		// Set channel on AudioHelm components
+		this.gameObject.GetComponent<AudioHelm.HelmController>().channel = celestialID;
+		this.gameObject.GetComponent<AudioHelm.HelmSequencer>().channel = celestialID;
+
+		// Set 3D sound settings for celestialObject
+		this.gameObject.GetComponent<AudioSource>().maxDistance = celestialBodyDistance+0.1f;
+
 		makeGUI();
 	}
 	
@@ -85,10 +92,37 @@ public class celestialProperties : MonoBehaviour {
 		instantiatedGUI.transform.Find("celestialName").gameObject.GetComponent<Text>().text = celestialName;
 		// Set celestialSprite to random image.
 		instantiatedGUI.transform.Find("celestialSprite").gameObject.GetComponent<Image>().sprite = celestialSpriteArray[Random.Range(0,8)]; 
+
+		// Find mute toggle in celestialStrip
+		instantiatedGUI.GetComponentInChildren<Toggle>().onValueChanged.AddListener((value) =>
+   		 {
+        	myListener(value);
+  		});
 	}
 
 
 
+
+
+
+	// Function that listens to the value of the mute button and toggles AudioSource mute.
+	public void myListener (bool value)
+	{
+		if(value)
+		{
+			this.gameObject.GetComponent<AudioSource>().mute = true;
+		}
+
+		else
+		{
+			this.gameObject.GetComponent<AudioSource>().mute = false;
+		}
+	}
+
+	void makeMixer ()
+	{
+		
+	}
 
 
 

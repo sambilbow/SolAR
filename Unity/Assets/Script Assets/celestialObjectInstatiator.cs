@@ -15,6 +15,31 @@ public class celestialObjectInstatiator : MonoBehaviour {
 	string[] systemNameIDs = new string[]{"Alpha","Beta","Gamma","Delta","Epsilon","Zeta","Eta","Theta","Iota","Kappa","Lambda","Mu","Nu","Xi","Omicron","Pi","Rho","Sigma","Tau","Upsilon","Phi","Chi","Psi","Omega"};
 	
 	
+
+	
+	void Start() 
+	{
+		GameObject.Find("System Title").gameObject.GetComponent<Text>().text = systemNameIDs[Random.Range(0,23)]+ "  -  " + Random.Range(3000,7000);
+		makeCelestial(amountOfCelestials);	
+	}
+
+
+
+
+
+
+
+
+	// Update is called once per frame
+	void Update () 
+	{
+		
+	}
+
+
+
+
+
 	// Use this for instantiation
 	public void makeCelestial (int amountOfCelestials) 
 	{
@@ -27,12 +52,14 @@ public class celestialObjectInstatiator : MonoBehaviour {
 			var celProps = instantiatedCelestial.GetComponent<celestialProperties>();
 			// Set name of instantiated prefab
 			instantiatedCelestial.gameObject.name = ("celestialObject"+i);
+			// Set parent of instantiated prefab
+			instantiatedCelestial.transform.SetParent(GameObject.Find("celestialManager").transform);
 			
 			// Randomise properties of the instantiated celestialObject prefab
 			celProps.celestialName = celestialNames[Random.Range(0,87)];
 			celProps.celestialID = i;
 			// Set distance from centre as i (celestialObject number) + a float value. This ensures that 0 is closest, and x where x = amountOfCelestials is the furthest.
-			celProps.celestialBodyDistance = i + Random.Range(0f,0.9f);
+			celProps.celestialBodyDistance = i+1 + Random.Range(0f,0.9f);
 			celProps.celestialOrbitFrequency = Random.Range(0.1f,180f);
 			celProps.celestialRotationalFrequency = Random.Range(0.1f,300f);
 			celProps.celestialBodyDiameter = Random.Range(0.00f,1f);
@@ -43,17 +70,5 @@ public class celestialObjectInstatiator : MonoBehaviour {
 			celProps.celestialInitOrbitFrequency = celProps.celestialOrbitFrequency;
 			celProps.celestialInitRotationalFrequency = celProps.celestialRotationalFrequency;
 		}
-	}
-	
-	void Start() 
-	{
-		GameObject.Find("System Title").gameObject.GetComponent<Text>().text = systemNameIDs[Random.Range(0,23)]+ "  -  " + Random.Range(3000,7000);
-		makeCelestial(amountOfCelestials);	
-	}
-
-	// Update is called once per frame
-	void Update () 
-	{
-		
 	}
 }
