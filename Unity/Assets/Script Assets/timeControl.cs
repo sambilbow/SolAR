@@ -4,38 +4,42 @@ using UnityEngine;
 
 public class timeControl : MonoBehaviour {
 
-	public GameObject mercury;
-	public GameObject venus;
-	public GameObject earth;
-	public GameObject mars;
-	public GameObject jupiter;
-	public GameObject saturn;
-	public GameObject uranus;
-	public GameObject neptune;
-	
-	 
-	
+		 
+	public GameObject slider;
+
 	public void updateMultiplier(float multiplier)
 	{
-		float defaultMercury = 1.607f;
-		float defaultVenus = 1.176f;
-		float defaultEarth = 1.000f;
-		float defaultMars = 0.809f;
-		float defaultJupiter = 0.439f;
-		float defaultSaturn = 0.325f;
-		float defaultUranus = 0.229f;
-		float defaultNeptune = 0.182f;
-		mercury.GetComponent<orbitController>().orbitSpeed = defaultMercury*multiplier;
-		venus.GetComponent<orbitController>().orbitSpeed = defaultVenus*multiplier;
-		earth.GetComponent<orbitController>().orbitSpeed = defaultEarth*multiplier;
-		mars.GetComponent<orbitController>().orbitSpeed = defaultMars*multiplier;
-		jupiter.GetComponent<orbitController>().orbitSpeed = defaultJupiter*multiplier;
-		saturn.GetComponent<orbitController>().orbitSpeed = defaultSaturn*multiplier;
-		uranus.GetComponent<orbitController>().orbitSpeed = defaultUranus*multiplier;
-		neptune.GetComponent<orbitController>().orbitSpeed = defaultNeptune*multiplier;
+		// Find amount of celestials integer from celestial manager gameobejct.
+		int amountOfCelestials = GameObject.Find("celestialManager").gameObject.GetComponent<celestialObjectInstatiator>().amountOfCelestials;
+		
+
+		for(int i = 0; i < amountOfCelestials; i++)
+		{
+			// Find instantiated object individually
+			GameObject celestialObject = GameObject.Find("celestialObject"+i).gameObject;
+			
+			
+			// Define properties script for ease of code
+			var celProps = celestialObject.GetComponent<celestialProperties>();
+
+			// Multiply their rotational and orbital frequencies by slider amount.
+			celProps.celestialOrbitFrequency = celProps.celestialInitOrbitFrequency*multiplier;
+			celProps.celestialRotationalFrequency = celProps.celestialInitRotationalFrequency*multiplier;
+
+
+		}
 	}
 
-	
+	void Update() 
+	{
+		
+		/*
+		GameObject celestialObject0 = GameObject.Find("celestialObject0").gameObject;
+		float celestialObject0OF = celestialObject0.GetComponent<celestialProperties>().celestialOrbitFrequency;
+
+		celestialObject0OF = celestialObject0OF*slider.GetComponent<UnityEngine.UI.Slider>().value;
+		*/
+	}
 
 
 

@@ -11,12 +11,13 @@ public class celestialProperties : MonoBehaviour {
 	public float celestialBodyDistance = 0f;
 	public float celestialOrbitFrequency = 1.0f;
 	public float celestialRotationalFrequency = 1.0f;
+	public float celestialInitOrbitFrequency = 1.0f;
+	public float celestialInitRotationalFrequency = 1.0f;
 	public float celestialBodyDiameter = 0f;
-
 	public float celestialBodyTemperature = 0f;
 	public Vector3 celestialOrbitAxis  = new Vector3(0,1,0);
 	public GameObject celestialStrip;
-	public GameObject celestialBank;
+
 	
 	
 
@@ -49,8 +50,10 @@ public class celestialProperties : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+		float sliderValue = GameObject.Find("Time Slider").gameObject.GetComponent<Slider>().value;
+
 		// Orbit attached object around parent Y axis at defined cycles per second
-		this.transform.RotateAround(Vector3.zero,celestialOrbitAxis,(celestialOrbitFrequency*(Time.deltaTime/31536000)*360));
+		this.transform.RotateAround(Vector3.zero,celestialOrbitAxis,((celestialOrbitFrequency*(Time.deltaTime/31536000)*360)));
 		// Rotate attached object around its own Y axis at defined cycles per second
 		this.transform.Rotate(Vector3.up*(celestialRotationalFrequency*(Time.deltaTime/86400))*360, Space.World);
 	}
@@ -74,8 +77,8 @@ public class celestialProperties : MonoBehaviour {
 		
 		
 		// Set the instantiated prefab as a child of the celestial bank previously defined.
-		instantiatedGUI.transform.parent = celestialBankTransform;
-				// Set celestialStrip name
+		instantiatedGUI.transform.SetParent(celestialBankTransform);
+		// Set celestialStrip name
 		instantiatedGUI.transform.Find("celestialName").gameObject.GetComponent<Text>().text = celestialName;
 		//Set celestialSprite to random image.
 		instantiatedGUI.transform.Find("celestialSprite").gameObject.GetComponent<Image>().sprite = celestialSpriteArray[Random.Range(0,8)]; 

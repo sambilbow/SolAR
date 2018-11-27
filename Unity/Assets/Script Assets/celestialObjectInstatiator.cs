@@ -25,21 +25,27 @@ public class celestialObjectInstatiator : MonoBehaviour {
 			var instantiatedCelestial = Instantiate(celestialObject, new Vector3(0,0,0),Quaternion.identity);
 			// Define properties script for ease of code
 			var celProps = instantiatedCelestial.GetComponent<celestialProperties>();
+
+			instantiatedCelestial.gameObject.name = ("celestialObject"+i);
 			
-			//
+			// Randomise properties of the instantiated celestialObject prefab
 			celProps.celestialName = celestialNames[Random.Range(0,87)];
-			celProps.celestialBodyDistance = Random.Range(0f,1f);
-			celProps.celestialOrbitFrequency = Random.Range(0f,1f);
-			celProps.celestialRotationalFrequency = Random.Range(0f,1f);
-			celProps.celestialBodyDiameter = Random.Range(0f,1f);
-			celProps.celestialBodyTemperature = Random.Range(0f,1f);
+			celProps.celestialBodyDistance = Random.Range(0.1f,15f);
+			celProps.celestialOrbitFrequency = Random.Range(0.1f,180f);
+			celProps.celestialRotationalFrequency = Random.Range(0.1f,300f);
+			celProps.celestialBodyDiameter = Random.Range(0.00f,1f);
+			celProps.celestialBodyTemperature = Random.Range(0f,4000f);
 			celProps.celestialOrbitAxis = new Vector3(0,1,0);
+
+			// Store initial values for these two so that scaling doesnt multiply by itself
+			celProps.celestialInitOrbitFrequency = celProps.celestialOrbitFrequency;
+			celProps.celestialInitRotationalFrequency = celProps.celestialRotationalFrequency;
 		}
 	}
 	
 	void Start() 
 	{
-		var systemName = GameObject.Find("System Title").gameObject.GetComponent<Text>().text = systemNameIDs[Random.Range(0,23)]+ "    " + Random.Range(3000,7000);
+		GameObject.Find("System Title").gameObject.GetComponent<Text>().text = systemNameIDs[Random.Range(0,23)]+ "  -  " + Random.Range(3000,7000);
 		makeCelestial(amountOfCelestials);	
 	}
 

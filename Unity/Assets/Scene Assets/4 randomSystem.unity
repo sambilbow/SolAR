@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 34564396}
   - component: {fileID: 34564395}
   m_Layer: 0
-  m_Name: Scale 500x
+  m_Name: Scale 5000x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 500x
+  m_Text: 5000x
 --- !u!222 &34564396
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   celestialObject: {fileID: 1334128978474396, guid: b0c230cda5c384fdba7b369fe70157b3,
     type: 2}
-  amountOfCelestials: 8
+  amountOfCelestials: 7
 --- !u!1001 &179224632
 Prefab:
   m_ObjectHideFlags: 0
@@ -516,6 +516,11 @@ Prefab:
     - {fileID: 81432455356198848, guid: ee0956b5cc7724c6b9ca560074c06b67, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: ee0956b5cc7724c6b9ca560074c06b67, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &368987242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100008, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1173920860}
 --- !u!1 &651401956
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,7 +880,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d, type: 2}
       propertyPath: m_MaxValue
-      value: 1000
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d, type: 2}
       propertyPath: m_Value
@@ -929,6 +934,10 @@ Prefab:
       propertyPath: m_Name
       value: Time Slider
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d, type: 2}
+      propertyPath: m_WholeNumbers
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d, type: 2}
   m_IsPrefabAsset: 0
@@ -948,7 +957,7 @@ GameObject:
   - component: {fileID: 1537665278}
   - component: {fileID: 1537665277}
   m_Layer: 0
-  m_Name: Scale 750x
+  m_Name: Scale 7500x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1004,7 +1013,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 750x
+  m_Text: 7500x
 --- !u!222 &1537665278
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1217,7 +1226,7 @@ GameObject:
   - component: {fileID: 1878943989}
   - component: {fileID: 1878943988}
   m_Layer: 0
-  m_Name: Scale 1000x
+  m_Name: Scale 10000x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1238,8 +1247,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.000037686186, y: -1.6361188}
   m_AnchorMax: {x: 0.05018942, y: -0.82732767}
-  m_AnchoredPosition: {x: 880.17993, y: 0}
-  m_SizeDelta: {x: 52.8, y: 0}
+  m_AnchoredPosition: {x: 870.71, y: 0}
+  m_SizeDelta: {x: 71.74, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1878943988
 MonoBehaviour:
@@ -1273,7 +1282,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1000x
+  m_Text: 10000x
 --- !u!222 &1878943989
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1423,14 +1432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3feaa1641d2542cf8d9ff352bc0f4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mercury: {fileID: 0}
-  venus: {fileID: 0}
-  earth: {fileID: 0}
-  mars: {fileID: 0}
-  jupiter: {fileID: 0}
-  saturn: {fileID: 0}
-  uranus: {fileID: 0}
-  neptune: {fileID: 0}
+  slider: {fileID: 368987242}
 --- !u!114 &2011756711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1531,7 +1533,7 @@ GameObject:
   - component: {fileID: 2100440852}
   - component: {fileID: 2100440851}
   m_Layer: 0
-  m_Name: Scale 250x
+  m_Name: Scale 2500x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1587,7 +1589,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 250x
+  m_Text: 2500x
 --- !u!222 &2100440852
 CanvasRenderer:
   m_ObjectHideFlags: 0
