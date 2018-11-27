@@ -8,6 +8,7 @@ public class celestialProperties : MonoBehaviour {
 	// Define public variables and axis of spin.
 	
 	public string celestialName = "defaultName";
+	public int celestialID = 0;
 	public float celestialBodyDistance = 0f;
 	public float celestialOrbitFrequency = 1.0f;
 	public float celestialRotationalFrequency = 1.0f;
@@ -78,9 +79,11 @@ public class celestialProperties : MonoBehaviour {
 		
 		// Set the instantiated prefab as a child of the celestial bank previously defined.
 		instantiatedGUI.transform.SetParent(celestialBankTransform);
-		// Set celestialStrip name
+		// Set name of insantiated celestialStrip
+		instantiatedGUI.name = "celestialStrip" + celestialID;
+		// Set celestialStrip text
 		instantiatedGUI.transform.Find("celestialName").gameObject.GetComponent<Text>().text = celestialName;
-		//Set celestialSprite to random image.
+		// Set celestialSprite to random image.
 		instantiatedGUI.transform.Find("celestialSprite").gameObject.GetComponent<Image>().sprite = celestialSpriteArray[Random.Range(0,8)]; 
 	}
 

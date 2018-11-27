@@ -12,8 +12,8 @@ public class setBPM : MonoBehaviour {
 
 	void Update()
 	{
-	float oldRange = (1f - 0.0000000316880878140289f);
+	float oldRange = (10000f - 1f);
 	float newRange = (bpmMaximum-bpmMinimum);
-	GetComponent<AudioHelm.AudioHelmClock>().bpm = (((timeSlider.value - 0.0000000316880878140289f) * newRange) / oldRange) + 20f;
+	GetComponent<AudioHelm.AudioHelmClock>().bpm = (((timeSlider.value - 1f) * newRange) / oldRange) + 20f;
 	}
 }

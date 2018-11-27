@@ -25,12 +25,14 @@ public class celestialObjectInstatiator : MonoBehaviour {
 			var instantiatedCelestial = Instantiate(celestialObject, new Vector3(0,0,0),Quaternion.identity);
 			// Define properties script for ease of code
 			var celProps = instantiatedCelestial.GetComponent<celestialProperties>();
-
+			// Set name of instantiated prefab
 			instantiatedCelestial.gameObject.name = ("celestialObject"+i);
 			
 			// Randomise properties of the instantiated celestialObject prefab
 			celProps.celestialName = celestialNames[Random.Range(0,87)];
-			celProps.celestialBodyDistance = Random.Range(0.1f,15f);
+			celProps.celestialID = i;
+			// Set distance from centre as i (celestialObject number) + a float value. This ensures that 0 is closest, and x where x = amountOfCelestials is the furthest.
+			celProps.celestialBodyDistance = i + Random.Range(0f,0.9f);
 			celProps.celestialOrbitFrequency = Random.Range(0.1f,180f);
 			celProps.celestialRotationalFrequency = Random.Range(0.1f,300f);
 			celProps.celestialBodyDiameter = Random.Range(0.00f,1f);
