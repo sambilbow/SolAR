@@ -5,20 +5,24 @@ using AudioHelm;
 
 public class sequenceMaker : MonoBehaviour {
 
-	public int increase = 3;
-	public int startingNote = 24;
+	public int increase = 0;
+	public int startingNote = 0;
 	
 	// Use this for initialization
-	public void Start () {
-		Sequencer sequencer = this.gameObject.GetComponent<AudioHelm.Sequencer>();
+	public void Start () 
+	{
+		/* Sequencer sequencer = this.gameObject.GetComponent<AudioHelm.Sequencer>();
 		sequencer.Clear();
 		int length = sequencer.length;
+		int celestialID = this.gameObject.GetComponent<celestialProperties>().celestialID;
 		
-		for (int i = 0; i < length; ++i)
+		startingNote = (celestialID+1)*12;
+		
+		 for (int i = 0; i < length; ++i)
 		{
 			sequencer.AddNote(startingNote + i *increase, i, i + 1);
-		}
-	
+		} */
+		
 	}
 	
 	// Update is called once per frame

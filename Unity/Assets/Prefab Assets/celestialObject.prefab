@@ -176,7 +176,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -469,7 +469,7 @@ MonoBehaviour:
   - notes: []
   - notes: []
   - notes: []
-  scrollPosition: {x: 0, y: 0}
+  scrollPosition: {x: 0, y: 802.6428}
   autoScroll: 0
   division: 1
   zoom: 0.3
@@ -714,7 +714,7 @@ MonoBehaviour:
   celestialBodyDiameter: 0.3
   celestialBodyTemperature: 0
   celestialOrbitAxis: {x: 0, y: 1, z: 0}
-  celestialStrip: {fileID: 1580208880518160, guid: 437488c0a2ffc4da4bca855a2d14f68c,
+  celestialStrip: {fileID: 1731280331109496, guid: 603d096d0525e49d58da1a6165491d02,
     type: 2}
 --- !u!135 &135310528792173084
 SphereCollider:
