@@ -8,10 +8,10 @@ public class sequenceMaker : MonoBehaviour {
 		
         public int[] scale = { 0, 2, 4, 7, 9 };
 
-        public int minNote = 48;
-        public int octaveSpan = 2;
-        public float minDensity = 0.5f;
-        public float maxDensity = 1.0f;
+        public int minNote = 0;
+        public int octaveSpan = 1;
+        public float minDensity = 1f;
+        public float maxDensity = 1f;
 
         void GenerateRhythm()
         {
@@ -28,13 +28,17 @@ public class sequenceMaker : MonoBehaviour {
 
         int GetKeyFromRandomWalk(int note)
         {
+			var celProps = this.gameObject.GetComponent<celestialProperties>();
+			minNote = (celProps.celestialID +1)*12 ;
+
             int octave = note / scale.Length;
             int scalePosition = note % scale.Length;
-            return minNote + octave * Utils.kNotesPerOctave + scale[scalePosition];
+            return minNote + octave*5 * Utils.kNotesPerOctave + scale[scalePosition];
         }
 
         int GetNextNote(int current, int max)
         {
+			var celProps = this.gameObject.GetComponent<celestialProperties>();
             int next = current + Random.Range(-3, 3);
 
             if (next > max)
@@ -47,6 +51,7 @@ public class sequenceMaker : MonoBehaviour {
 
         public void Generate()
         {
+			var celProps = this.gameObject.GetComponent<celestialProperties>();
 			Sequencer  sequencer = this.gameObject.GetComponent<HelmSequencer>(); 
             sequencer.Clear();
 

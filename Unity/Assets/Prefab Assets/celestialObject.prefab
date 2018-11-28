@@ -337,7 +337,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: AudioHelm.Sequencer+BeatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  length: 16
+  length: 64
   currentIndex: -1
   loop: 1
   allNotes:
@@ -469,10 +469,10 @@ MonoBehaviour:
   - notes: []
   - notes: []
   - notes: []
-  scrollPosition: {x: 0, y: 802.6428}
+  scrollPosition: {x: 0, y: 895}
   autoScroll: 0
   division: 1
-  zoom: 0.3
+  zoom: 0
   channel: 0
 --- !u!114 &114114645671184932
 MonoBehaviour:
@@ -719,7 +719,6 @@ MonoBehaviour:
   celestialOrbitAxis: {x: 0, y: 1, z: 0}
   celestialStrip: {fileID: 1731280331109496, guid: 603d096d0525e49d58da1a6165491d02,
     type: 2}
-  locator: {fileID: 1398225629679742}
 --- !u!135 &135310528792173084
 SphereCollider:
   m_ObjectHideFlags: 1
