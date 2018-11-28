@@ -56,10 +56,8 @@ public class celestialProperties : MonoBehaviour {
 
 
 	// Update is called once per frame
-	void Update () {
-		
-		float sliderValue = GameObject.Find("Time Slider").gameObject.GetComponent<Slider>().value;
-
+	void Update () 
+	{
 		// Orbit attached object around parent Y axis at defined cycles per second
 		this.transform.RotateAround(Vector3.zero,celestialOrbitAxis,((celestialOrbitFrequency*(Time.deltaTime/31536000)*360)));
 		// Rotate attached object around its own Y axis at defined cycles per second
@@ -108,6 +106,7 @@ public class celestialProperties : MonoBehaviour {
 	// Function that listens to the value of the mute button and toggles AudioSource mute.
 	public void myListener (bool value)
 	{
+		// If button pressed i.e. value = 1, then mute gameobject audiosource
 		if(value)
 		{
 			this.gameObject.GetComponent<AudioSource>().mute = true;
