@@ -19,6 +19,7 @@ public class celestialObjectInstatiator : MonoBehaviour {
 	
 	void Start() 
 	{
+		amountOfCelestials = Random.Range(1,11);
 		GameObject.Find("System Title").gameObject.GetComponent<Text>().text = systemNameIDs[Random.Range(0,23)]+ "  -  " + Random.Range(3000,7000);
 		makeCelestial(amountOfCelestials);	
 	}

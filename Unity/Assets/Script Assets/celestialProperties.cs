@@ -18,6 +18,7 @@ public class celestialProperties : MonoBehaviour {
 	public float celestialBodyTemperature = 0f;
 	public Vector3 celestialOrbitAxis  = new Vector3(0,1,0);
 	public GameObject celestialStrip;
+	//public GameObject locator;
 
 	
 	
@@ -96,6 +97,9 @@ public class celestialProperties : MonoBehaviour {
    		 {
         	myListener(value);
   		});
+
+		// Find locate button in celestialStrip
+		instantiatedGUI.GetComponentInChildren<Button>().onClick.AddListener(buttonAction);
 	}
 
 
@@ -103,8 +107,22 @@ public class celestialProperties : MonoBehaviour {
 
 
 
+
+	// Function that plays locator sound effect on start
+	public void buttonAction()
+	{
+		this.gameObject.transform.GetChild(0).GetComponent<AudioSource>().Play();
+	}
+
+
+
+
+
+
+
+
 	// Function that listens to the value of the mute button and toggles AudioSource mute.
-	public void myListener (bool value)
+	void myListener (bool value)
 	{
 		// If button pressed i.e. value = 1, then mute gameobject audiosource
 		if(value)

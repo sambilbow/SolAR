@@ -649,8 +649,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca51664ff8aa4feab38f5665844ed24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  increase: 3
-  startingNote: 24
+  scale: 0000000002000000040000000700000009000000
+  minNote: 24
+  octaveSpan: 2
+  minDensity: 0.5
+  maxDensity: 1
 --- !u!114 &114578082911549856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -716,6 +719,7 @@ MonoBehaviour:
   celestialOrbitAxis: {x: 0, y: 1, z: 0}
   celestialStrip: {fileID: 1731280331109496, guid: 603d096d0525e49d58da1a6165491d02,
     type: 2}
+  locator: {fileID: 1398225629679742}
 --- !u!135 &135310528792173084
 SphereCollider:
   m_ObjectHideFlags: 1
