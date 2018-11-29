@@ -29,6 +29,8 @@ GameObject:
   - component: {fileID: 114114645671184932}
   - component: {fileID: 114066532893547304}
   - component: {fileID: 114273540506466458}
+  - component: {fileID: 114371276262666904}
+  - component: {fileID: 114530981484422084}
   m_Layer: 0
   m_Name: celestialObject
   m_TagString: Planet
@@ -469,7 +471,7 @@ MonoBehaviour:
   - notes: []
   - notes: []
   - notes: []
-  scrollPosition: {x: 0, y: 895}
+  scrollPosition: {x: 0, y: 669.1638}
   autoScroll: 0
   division: 1
   zoom: 0
@@ -654,6 +656,31 @@ MonoBehaviour:
   octaveSpan: 2
   minDensity: 0.5
   maxDensity: 1
+--- !u!114 &114371276262666904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334128978474396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8c1875c6976444b99805526f60e313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114530981484422084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334128978474396}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7bb692ea8f9042118e2ad15fdee914a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  helmController: {fileID: 114578082911549856}
+  midiNote: 0
+  velocity: 1
 --- !u!114 &114578082911549856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -682,7 +709,25 @@ MonoBehaviour:
   synthParamValue13: 0
   synthParamValue14: 0
   synthParamValue15: 0
-  synthParameters: []
+  synthParameters:
+  - parameter_: 47
+    scaleType: 1
+    parent: {fileID: 114578082911549856}
+    minimumRange: -7
+    maximumRange: 6
+    paramValue_: 0
+  - parameter_: 53
+    scaleType: 1
+    parent: {fileID: 114578082911549856}
+    minimumRange: -7
+    maximumRange: 6
+    paramValue_: 0
+  - parameter_: 14
+    scaleType: 1
+    parent: {fileID: 114578082911549856}
+    minimumRange: 28
+    maximumRange: 127
+    paramValue_: 0
 --- !u!114 &114690379282741132
 MonoBehaviour:
   m_ObjectHideFlags: 1

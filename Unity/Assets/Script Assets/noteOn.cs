@@ -20,6 +20,7 @@ public class noteOn : MonoBehaviour {
 	// Function that calls midi note on with defined note value and velocity
 	void startNote ()
 	{
+		midiNote = (this.gameObject.GetComponent<celestialProperties>().celestialID+1)*10;
 		// Note on with defined values
 		helmController.NoteOn(midiNote, velocity);
 	}

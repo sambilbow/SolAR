@@ -11,7 +11,7 @@ public class sequenceMaker : MonoBehaviour {
         public int minNote = 0;
         public int octaveSpan = 1;
         public float minDensity = 1f;
-        public float maxDensity = 1f;
+        public float maxDensity = 100f;
 
         void GenerateRhythm()
         {
@@ -33,7 +33,7 @@ public class sequenceMaker : MonoBehaviour {
 
             int octave = note / scale.Length;
             int scalePosition = note % scale.Length;
-            return minNote + octave*5 * Utils.kNotesPerOctave + scale[scalePosition];
+            return minNote + octave * Utils.kNotesPerOctave + scale[scalePosition];
         }
 
         int GetNextNote(int current, int max)

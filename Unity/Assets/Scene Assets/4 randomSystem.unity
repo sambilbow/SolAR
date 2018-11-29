@@ -332,7 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   celestialObject: {fileID: 1334128978474396, guid: b0c230cda5c384fdba7b369fe70157b3,
     type: 2}
-  amountOfCelestials: 4
+  amountOfCelestials: 14
 --- !u!1001 &179224632
 Prefab:
   m_ObjectHideFlags: 0
