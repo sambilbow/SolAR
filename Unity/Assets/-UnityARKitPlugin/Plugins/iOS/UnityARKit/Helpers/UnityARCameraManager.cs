@@ -46,9 +46,18 @@ public class UnityARCameraManager : MonoBehaviour {
 				config.dynamicReferenceObjectsPtr = m_session.CreateNativeReferenceObjectsSet(detectionObjects.LoadReferenceObjectsInSet());
 			}
 
+
             return config;
+
+            
         }
     }
+
+   /*  public void ResetScene() 
+	{
+		ARKitWorldTrackingSessionConfiguration config = new ARKitWorldTrackingSessionConfiguration ( UnityARAlignment.UnityARAlignmentGravity, UnityARPlaneDetection.Horizontal);
+        UnityARSessionNativeInterface.GetARSessionNativeInterface().RunWithConfigAndOptions(config, UnityARSessionRunOption.ARSessionRunOptionRemoveExistingAnchors | UnityARSessionRunOption.ARSessionRunOptionResetTracking);
+	} */
 
     // Use this for initialization
     void Start () {
