@@ -26,9 +26,11 @@ public class parameterController : MonoBehaviour {
 		// Setting parameters scaled to percentages
 		HelmController controller = this.gameObject.GetComponent<AudioHelm.HelmController>();
 		
-		// Scales LFO 1 frequenc
+		// Scales LFO 1 frequency to orbit frequency (osc 1 + 2 amt)
 		controller.SetParameterAtIndex(1,scale(celestialOrbitFrequency,0.1f,180f,0f,1f));
+		// Scales LFO 2 frequency to rotational frequency (filter resonance %)
 		controller.SetParameterAtIndex(2,scale(celestialRotationalFrequency,0.1f,300f,0f,1f));
+		// Scales filter cutoff to temperature
 		controller.SetParameterAtIndex(3,scale(celestialBodyTemperature,0f,4000f,0.5f,1f));
 
 	}

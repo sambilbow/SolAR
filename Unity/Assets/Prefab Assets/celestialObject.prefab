@@ -339,7 +339,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: AudioHelm.Sequencer+BeatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  length: 64
+  length: 16
   currentIndex: -1
   loop: 1
   allNotes:
@@ -471,7 +471,7 @@ MonoBehaviour:
   - notes: []
   - notes: []
   - notes: []
-  scrollPosition: {x: 0, y: 669.1638}
+  scrollPosition: {x: 0, y: 895}
   autoScroll: 0
   division: 1
   zoom: 0
