@@ -9,7 +9,7 @@ public class nextDialogue : MonoBehaviour {
 
 	public void OnClick()
 	{
-		GameObject.Find("dialogueManager").gameObject.GetComponent<celestialDialogueInstantiator>().setActive(parent.GetComponent<dialogueID>().ID+1);
+		GameObject.Find("dialogueManager").gameObject.GetComponent<celestialDialogueInstantiator>().setActive(parent.GetComponent<dialogueProperties>().ID+1);
 
 	}
 	

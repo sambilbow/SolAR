@@ -25,7 +25,7 @@ public class celestialDialogueInstantiator : MonoBehaviour {
 			instantiatedDialogue.transform.SetParent(GameObject.Find("createDialogue").gameObject.transform, false);
 			instantiatedDialogue.SetActive(false);
 			instantiatedDialogue.name = "celestialDialogue"+i.ToString();	
-			instantiatedDialogue.GetComponent<dialogueID>().ID = i;
+			instantiatedDialogue.GetComponent<dialogueProperties>().ID = i;
 
 			if (i == 0)
 			{

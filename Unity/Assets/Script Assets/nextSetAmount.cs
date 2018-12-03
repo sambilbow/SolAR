@@ -37,7 +37,7 @@ public class nextSetAmount : MonoBehaviour {
 
 				string celestialName = celestialDialogue.GetChild(2).GetComponent<Text>().text;
 				float celestialBodyDistance = celestialDialogue.GetChild(4).GetComponent<Slider>().value;
-				float celestialOrbitalFrequency = celestialDialogue.GetChild(6).GetComponent<Slider>().value;
+				float celestialOrbitFrequency = celestialDialogue.GetChild(6).GetComponent<Slider>().value;
 				float celestialRotationalFrequency = celestialDialogue.GetChild(8).GetComponent<Slider>().value;
 				float celestialBodyDiameter = celestialDialogue.GetChild(10).GetComponent<Slider>().value;
 				float celestialBodyTemperature = celestialDialogue.GetChild(12).GetComponent<Slider>().value;
@@ -56,7 +56,7 @@ public class nextSetAmount : MonoBehaviour {
 				celProps.celestialID = i;
 				// Set distance from centre as i (celestialObject number) + a float value. This ensures that 0 is closest, and x where x = amountOfCelestials is the furthest.
 				celProps.celestialBodyDistance = celestialBodyDistance;
-				celProps.celestialOrbitFrequency = celestialOrbitalFrequency;
+				celProps.celestialOrbitFrequency = celestialOrbitFrequency;
 				celProps.celestialRotationalFrequency = celestialRotationalFrequency;
 				celProps.celestialBodyDiameter = celestialBodyDiameter;
 				celProps.celestialBodyTemperature = celestialBodyTemperature;
