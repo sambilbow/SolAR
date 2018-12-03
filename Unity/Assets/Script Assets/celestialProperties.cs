@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class celestialProperties : MonoBehaviour {
 
@@ -18,6 +19,7 @@ public class celestialProperties : MonoBehaviour {
 	public float celestialBodyTemperature = 0f;
 	public Vector3 celestialOrbitAxis  = new Vector3(0,1,0);
 	public GameObject celestialStrip;
+	
 	//public GameObject locator;
 
 	
@@ -41,8 +43,16 @@ public class celestialProperties : MonoBehaviour {
 		this.gameObject.transform.position = new Vector3 (posX,0,posZ);
 
 		// Set channel on AudioHelm components
-		this.gameObject.GetComponent<AudioHelm.HelmController>().channel = celestialID;
-		this.gameObject.GetComponent<AudioHelm.HelmSequencer>().channel = celestialID;
+
+		var controller = this.gameObject.GetComponent<AudioHelm.HelmController>();
+		var sequencer = this.gameObject.GetComponent<AudioHelm.HelmSequencer>();
+
+		controller.channel = celestialID;
+		
+		if (sequencer != null) 
+		{
+			sequencer.channel = celestialID;
+		}
 
 		// Set 3D sound settings for celestialObject
 		this.gameObject.GetComponent<AudioSource>().maxDistance = celestialBodyDistance+0.1f;
@@ -76,30 +86,33 @@ public class celestialProperties : MonoBehaviour {
 		// Define array of sprites from specified folder.
 		Sprite[] celestialSpriteArray = Resources.LoadAll<Sprite>("celestialSprites");
 		// Define transform of celestial bank
-		var celestialBankTransform = GameObject.Find("celestialBank").gameObject.transform;
 		
-		
-		// Instantiate celestialStrip prefab
-		var instantiatedGUI = Instantiate(celestialStrip, new Vector3 (0,0,0), Quaternion.identity);
-		
-		
-		// Set the instantiated prefab as a child of the celestial bank previously defined.
-		instantiatedGUI.transform.SetParent(celestialBankTransform);
-		// Set name of insantiated celestialStrip
-		instantiatedGUI.name = "celestialStrip" + celestialID;
-		// Set celestialStrip text
-		instantiatedGUI.transform.Find("celestialName").gameObject.GetComponent<Text>().text = celestialName;
-		// Set celestialSprite to random image.
-		instantiatedGUI.transform.Find("celestialSprite").gameObject.GetComponent<Image>().sprite = celestialSpriteArray[Random.Range(0,8)]; 
+		Transform celestialBankTransform =  Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g=>g.CompareTag("bank")).gameObject.transform;
+			
+			
+			
+			// Instantiate celestialStrip prefab
+			var instantiatedGUI = Instantiate(celestialStrip, new Vector3 (0,0,0), Quaternion.identity);
+			
+			
+			// Set the instantiated prefab as a child of the celestial bank previously defined.
+			instantiatedGUI.transform.SetParent(celestialBankTransform);
+			// Set name of insantiated celestialStrip
+			instantiatedGUI.name = "celestialStrip" + celestialID;
+			// Set celestialStrip text
+			instantiatedGUI.transform.Find("celestialName").gameObject.GetComponent<Text>().text = celestialName;
+			// Set celestialSprite to random image.
+			instantiatedGUI.transform.Find("celestialSprite").gameObject.GetComponent<Image>().sprite = celestialSpriteArray[Random.Range(0,8)]; 
 
-		// Find mute toggle in celestialStrip
-		instantiatedGUI.GetComponentInChildren<Toggle>().onValueChanged.AddListener((value) =>
-   		 {
-        	myListener(value);
-  		});
+			// Find mute toggle in celestialStrip
+			instantiatedGUI.GetComponentInChildren<Toggle>().onValueChanged.AddListener((value) =>
+			{
+				myListener(value);
+			});
 
-		// Find locate button in celestialStrip
-		instantiatedGUI.GetComponentInChildren<Button>().onClick.AddListener(buttonAction);
+			// Find locate button in celestialStrip
+			instantiatedGUI.GetComponentInChildren<Button>().onClick.AddListener(buttonAction);
+		
 	}
 
 

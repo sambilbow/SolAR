@@ -33,12 +33,7 @@ public class timeControl : MonoBehaviour {
 	void Update() 
 	{
 		
-		/*
-		GameObject celestialObject0 = GameObject.Find("celestialObject0").gameObject;
-		float celestialObject0OF = celestialObject0.GetComponent<celestialProperties>().celestialOrbitFrequency;
-
-		celestialObject0OF = celestialObject0OF*slider.GetComponent<UnityEngine.UI.Slider>().value;
-		*/
+		
 	}
 
 

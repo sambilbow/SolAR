@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene Assets/4 randomSystem.unity
     guid: 8658fb650d48f4d75a769d6138bf7510
+  - enabled: 1
+    path: Assets/Scene Assets/5 createSystem.unity
+    guid: 22e2ec606bf194c3a94a55949ed16d4c
   m_configObjects: {}

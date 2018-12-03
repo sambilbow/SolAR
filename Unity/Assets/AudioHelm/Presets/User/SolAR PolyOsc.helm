@@ -148,12 +148,17 @@
       {
         "source": "mono_lfo_2",
         "destination": "resonance",
-        "amount": -0.18371481582932813748
+        "amount": -0.8265752600773339509
       },
       {
         "source": "mono_lfo_1",
         "destination": "cross_modulation",
-        "amount": -0.13907812499999999689
+        "amount": 0.5
+      },
+      {
+        "source": "mono_lfo_1",
+        "destination": "resonance",
+        "amount": -0.43276182630268711371
       }
     ]
   }

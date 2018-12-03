@@ -14,14 +14,13 @@ public class noteOn : MonoBehaviour {
 	void Start ()
 	{
 		// Run startNote function after 0.1s
-		Invoke("startNote",0.1f);
+		InvokeRepeating("startNote",0.1f,2f);
 	}
 
 	// Function that calls midi note on with defined note value and velocity
 	void startNote ()
 	{
-		midiNote = (this.gameObject.GetComponent<celestialProperties>().celestialID+1)*10;
-		// Note on with defined values
-		helmController.NoteOn(midiNote, velocity);
+				// Note on with defined values
+		helmController.NoteOn(midiNote, velocity, 1f);
 	}
 }

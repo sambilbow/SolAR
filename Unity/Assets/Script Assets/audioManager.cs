@@ -20,8 +20,10 @@ public class audioManager : MonoBehaviour {
 			string masterMix = "Master";
 
 			celestialObject.GetComponent<AudioSource>().outputAudioMixerGroup = systemMixer.FindMatchingGroups(masterMix)[i+1];
+
+		
 		}
 
-
+	
 	}
 }

@@ -728,6 +728,12 @@ MonoBehaviour:
     minimumRange: 28
     maximumRange: 127
     paramValue_: 0
+  - parameter_: 31
+    scaleType: 1
+    parent: {fileID: 114578082911549856}
+    minimumRange: -12
+    maximumRange: 20
+    paramValue_: 0
 --- !u!114 &114690379282741132
 MonoBehaviour:
   m_ObjectHideFlags: 1
