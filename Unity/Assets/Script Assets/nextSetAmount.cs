@@ -33,7 +33,7 @@ public class nextSetAmount : MonoBehaviour {
 			for(int i = 0; i < slider.GetComponent<Slider>().value; i++)
 			{
 
-				Transform celestialDialogue = GameObject.Find("celestialDialogue"+i).gameObject.transform;
+				Transform celestialDialogue = GameObject.Find("celestialDialogue"+i.ToString()).gameObject.transform;
 
 				string celestialName = celestialDialogue.GetChild(2).GetComponent<Text>().text;
 				float celestialBodyDistance = celestialDialogue.GetChild(4).GetComponent<Slider>().value;
@@ -47,7 +47,7 @@ public class nextSetAmount : MonoBehaviour {
 				// Define properties script for ease of code
 				var celProps = instantiatedCelestial.GetComponent<celestialProperties>();
 				// Set name of instantiated prefab
-				instantiatedCelestial.gameObject.name = ("celestialObject"+i);
+				instantiatedCelestial.gameObject.name = ("celestialObject"+i.ToString());
 				// Set parent of instantiated prefab
 				instantiatedCelestial.transform.SetParent(GameObject.Find("celestialManager").transform);
 

@@ -24,7 +24,7 @@ public class celestialDialogueInstantiator : MonoBehaviour {
 			var instantiatedDialogue = Instantiate(celestialDialogue,transform.position, Quaternion.identity);
 			instantiatedDialogue.transform.SetParent(GameObject.Find("createDialogue").gameObject.transform, false);
 			instantiatedDialogue.SetActive(false);
-			instantiatedDialogue.name = "celestialDialogue"+i;	
+			instantiatedDialogue.name = "celestialDialogue"+i.ToString();	
 			instantiatedDialogue.GetComponent<dialogueID>().ID = i;
 
 			if (i == 0)
@@ -50,16 +50,18 @@ public class celestialDialogueInstantiator : MonoBehaviour {
 			// Set active createCelestials GUI panel
 			Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g=>g.CompareTag("Finish")).gameObject.SetActive(true);
 			GameObject.Find("System Title").gameObject.GetComponent<Text>().text = GameObject.Find("dialogueManager").GetComponent<celestialDialogueInstantiator>().systemNameCreate.GetComponent<Text>().text;
-			
-
-			this.gameObject.GetComponent<nextSetAmount>().nextButtonCelestials(true);			
-
+			this.gameObject.GetComponent<nextSetAmount>().nextButtonCelestials(true);
 			AudioListener.pause = false;
-			setAllInactive(parent.transform,true);
+			setAllInactive(parent.transform, true);	
+			
+			
 
 
 		}
+
+		
 	}
+
 
 	 // Sets all inactive if value = true
 	public void setAllInactive (Transform transform, bool value)

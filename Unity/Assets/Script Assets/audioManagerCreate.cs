@@ -18,7 +18,7 @@ public class audioManagerCreate : MonoBehaviour {
 		// For each celestial, assign corresponding audio mixer group based on celestialID/i (essentially the same value)
 		for(int i = 0; i < slider.value; i++)
 		{
-			GameObject celestialObject = GameObject.Find("celestialObject"+i).gameObject;
+			GameObject celestialObject = GameObject.Find("celestialObject"+i.ToString()).gameObject;
 			string masterMix = "Master";
 
 			celestialObject.GetComponent<AudioSource>().outputAudioMixerGroup = systemMixer.FindMatchingGroups(masterMix)[i+1];
@@ -29,3 +29,5 @@ public class audioManagerCreate : MonoBehaviour {
 	
 	}
 }
+
+
