@@ -10,9 +10,10 @@ public class celestialDialogueInstantiator : MonoBehaviour {
 	public GameObject celestialDialogue;
 	public GameObject systemNameCreate;
 	public GameObject parent;
-	public int dialogueID;
-	public GameObject slider;
-	public GameObject[] celestialObjects;
+	public Slider slider;
+	public GameObject createCelestials;
+	public GameObject celestialManager;
+	public GameObject systemTitle;
 
 	// Use this for instantiation
 	public void makeDialogue (int sliderValue) 
@@ -22,7 +23,7 @@ public class celestialDialogueInstantiator : MonoBehaviour {
 		{	
 			
 			var instantiatedDialogue = Instantiate(celestialDialogue,transform.position, Quaternion.identity);
-			instantiatedDialogue.transform.SetParent(GameObject.Find("createDialogue").gameObject.transform, false);
+			instantiatedDialogue.transform.SetParent(parent.gameObject.transform, false);
 			instantiatedDialogue.SetActive(false);
 			instantiatedDialogue.name = "celestialDialogue"+i.ToString();	
 			instantiatedDialogue.GetComponent<dialogueID>().ID = i;
@@ -37,22 +38,24 @@ public class celestialDialogueInstantiator : MonoBehaviour {
 	public void setActive(int indexToTurnOn)
 	{
 		// Turn on next dialogue
-		if(indexToTurnOn != slider.GetComponent<Slider>().value)
+		if(indexToTurnOn != slider.value)
 		{
 			GameObject.Find("createDialogue").gameObject.transform.GetChild(indexToTurnOn).gameObject.transform.localScale = new Vector3(0,0,0);
 			GameObject.Find("createDialogue").gameObject.transform.GetChild(1+indexToTurnOn).gameObject.SetActive(true);
 		}
 		
 		// When the last next button is pressed.
-		else
+		if (indexToTurnOn == slider.value)
 		{
 			
 			// Set active createCelestials GUI panel
-			Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g=>g.CompareTag("Finish")).gameObject.SetActive(true);
-			GameObject.Find("System Title").gameObject.GetComponent<Text>().text = GameObject.Find("dialogueManager").GetComponent<celestialDialogueInstantiator>().systemNameCreate.GetComponent<Text>().text;
-			this.gameObject.GetComponent<nextSetAmount>().nextButtonCelestials(true);
-			AudioListener.pause = false;
-			setAllInactive(parent.transform, true);	
+			parent.gameObject.transform.localScale = new Vector3(0,0,0);
+			createCelestials.SetActive(true);
+			systemTitle.gameObject.GetComponent<Text>().text = systemNameCreate.GetComponent<Text>().text;
+			
+			celestialManager.gameObject.GetComponent<celestialObjectInstantiatorCreator>().generate();
+			
+			
 			
 			
 
@@ -63,17 +66,4 @@ public class celestialDialogueInstantiator : MonoBehaviour {
 	}
 
 
-	 // Sets all inactive if value = true
-	public void setAllInactive (Transform transform, bool value)
-	{
-	 	foreach (Transform child in transform)
-			{
-				if(value == true)
-				{
-					child.gameObject.SetActive(!value);
-				}
-				
-	
-			}		
-	} 
 }

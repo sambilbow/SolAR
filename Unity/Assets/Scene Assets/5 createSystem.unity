@@ -302,6 +302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 157271629}
+  - component: {fileID: 157271630}
   m_Layer: 0
   m_Name: celestialManager
   m_TagString: Untagged
@@ -320,8 +321,23 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 651401957}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &157271630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157271628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7321a6965daae430790ba0d7262a23a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1034784498}
+  audioManager: {fileID: 338380865}
+  celestialObject: {fileID: 1334128978474396, guid: b0c230cda5c384fdba7b369fe70157b3,
+    type: 2}
 --- !u!1 &161523118
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +497,6 @@ GameObject:
   m_Component:
   - component: {fileID: 176163056}
   - component: {fileID: 176163057}
-  - component: {fileID: 176163058}
   m_Layer: 0
   m_Name: dialogueManager
   m_TagString: Untagged
@@ -500,7 +515,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 651401957}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &176163057
 MonoBehaviour:
@@ -517,26 +532,10 @@ MonoBehaviour:
     type: 2}
   systemNameCreate: {fileID: 454767409}
   parent: {fileID: 129410976}
-  dialogueID: 0
-  slider: {fileID: 1034784497}
-  celestialObjects: []
---- !u!114 &176163058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 176163055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f67e9889fb7b441f6a401f541a1e904d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 1034784497}
-  dialogueManager: {fileID: 176163055}
+  slider: {fileID: 1034784498}
+  createCelestials: {fileID: 585837757}
   celestialManager: {fileID: 157271628}
-  audioManager: {fileID: 338380865}
-  celestialObject: {fileID: 1334128978474396, guid: b0c230cda5c384fdba7b369fe70157b3,
-    type: 2}
+  systemTitle: {fileID: 1869170003}
 --- !u!1 &184022635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,8 +1217,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 144161136}
-  - {fileID: 176163056}
   - {fileID: 157271629}
+  - {fileID: 176163056}
   - {fileID: 338380866}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1325,6 +1324,16 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224047317511335510, guid: 93e3db6997a7c43bfa737517b091b35f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.5093384
+      objectReference: {fileID: 0}
+    - target: {fileID: 224047317511335510, guid: 93e3db6997a7c43bfa737517b091b35f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -19.647583
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93e3db6997a7c43bfa737517b091b35f, type: 2}
@@ -1740,11 +1749,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f67e9889fb7b441f6a401f541a1e904d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1034784497}
+  slider: {fileID: 1034784498}
   dialogueManager: {fileID: 176163055}
-  celestialManager: {fileID: 157271628}
-  audioManager: {fileID: 338380865}
-  celestialObject: {fileID: 0}
+--- !u!114 &1008528570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1008528565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e613335976cb4ebd81df4d70b633582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1029080338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,11 +1799,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1034784497 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100008, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1857758742}
 --- !u!114 &1034784498 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 11400000, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d,
@@ -2401,11 +2413,11 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 350745841}
+      objectReference: {fileID: 1008528570}
     - target: {fileID: 114415439341345584, guid: 6316bf3abf84347dd9bf5be398e0b15a,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
+      value: hide0
       objectReference: {fileID: 0}
     - target: {fileID: 114415439341345584, guid: 6316bf3abf84347dd9bf5be398e0b15a,
         type: 2}
@@ -2415,6 +2427,11 @@ Prefab:
     - target: {fileID: 114415439341345584, guid: 6316bf3abf84347dd9bf5be398e0b15a,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114415439341345584, guid: 6316bf3abf84347dd9bf5be398e0b15a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -2749,6 +2766,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1869170003 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1460390921010480, guid: 1457a041acc55491fb0be0369c5ce23e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2041494055}
 --- !u!224 &1990206560 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224213071381277954, guid: 6316bf3abf84347dd9bf5be398e0b15a,
@@ -2871,7 +2893,7 @@ Prefab:
     - target: {fileID: 224093013641998220, guid: 1457a041acc55491fb0be0369c5ce23e,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000061035156
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224093013641998220, guid: 1457a041acc55491fb0be0369c5ce23e,
         type: 2}
