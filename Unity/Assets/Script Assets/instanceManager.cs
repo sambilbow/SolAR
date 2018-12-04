@@ -11,29 +11,29 @@ public class instanceManager : MonoBehaviour {
 	public GameObject celestialDialoguePrefab;
 	// Attach celestial dialogue parent
 	public GameObject celestialDialogueParent;
-	// Attach button to listen to
-	public GameObject nextButton;
-	// Attach slider to listen to
-	public Slider amountSlider;
+	
 
 
-	public void nextInstance()
-	{
-		nextButton.GetComponent<Button>().onClick.AddListener(()=> makeDialogue(Mathf.RoundToInt(amountSlider.value)));
-	}
 	
 	// Use this for initialization
 	public void makeDialogue (int amountOfCelestials) {
 		
 		for(int i = 0; i < amountOfCelestials; i++)
 		{
-			Debug.Log("ran!");
+			
 			// INSTANCED DIALOGUE CODE
 		
 			// Instance dialogue
 			GameObject instancedDialogue = Instantiate(celestialDialoguePrefab,celestialDialogueParent.transform.position,Quaternion.identity);
 			// Set dialogue name based on i
 			instancedDialogue.gameObject.name = "celestialDialogue"+i.ToString();
+			
+			// Set parent to x and DONT place relative to with parent transform
+			instancedDialogue.transform.SetParent(celestialDialogueParent.transform,false);
+			
+			// Set inactive
+			instancedDialogue.SetActive(false);
+
 			
 			// Find properties script attached to dialogue
 			var diaProps = instancedDialogue.GetComponent<dialogueProperties>();
@@ -59,6 +59,9 @@ public class instanceManager : MonoBehaviour {
 		GameObject instancedCelestial = Instantiate(celestialObjectPrefab, new Vector3 (0,0,0), Quaternion.identity);
 		// Set object name based on i
 		instancedCelestial.gameObject.name = "celestialObject"+ID.ToString();
+		// Set parent to x and DONT place relative to with parent transform
+		instancedCelestial.transform.SetParent(this.gameObject.transform,false);
+		
 		// Find properties script attached to object
 		var celProps = instancedCelestial.gameObject.GetComponent<celestialProperties>();
 		

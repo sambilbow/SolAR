@@ -1,16 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class nextButton : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+	public GameObject dialogueManager;
+	public Slider amountSlider;
 	
-	// Update is called once per frame
-	void Update () {
+	public void nextInstance()
+	{
+
+		// Set inactive "createSystem"
+		this.gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
 		
 	}
+
+	
 }
