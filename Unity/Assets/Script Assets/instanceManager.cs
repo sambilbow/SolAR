@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class instanceManager : MonoBehaviour {
 
+	public static instanceManager instance;
+	
 	// Attach celestial object prefab
 	public GameObject celestialObjectPrefab;
 	// Attach celestial dialogue prefab
@@ -12,11 +14,33 @@ public class instanceManager : MonoBehaviour {
 	// Attach celestial dialogue parent
 	public GameObject celestialDialogueParent;
 	
-
+	public List<string> dialogueLogicsList = new List<string>();
 
 	
+	
 	// Use this for initialization
+	
+	 private void Awake()
+    {
+        if (instance == null)
+        {
+ 
+            //if not, set instance to this
+            instance = this;
+ 
+            //If instance already exists and it's not this:
+        }
+        else if (instance != this)
+        {
+ 
+            //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a celestialDialogueInstantiator.
+            Destroy(gameObject);
+        }
+    }
+	
 	public void makeDialogue (int amountOfCelestials) {
+
+		
 		
 		for(int i = 0; i < amountOfCelestials; i++)
 		{
@@ -44,8 +68,7 @@ public class instanceManager : MonoBehaviour {
 			
 			
 			
-			// Run instanced object script below with premade properties from slider values.
-			makeCelestial(i, diaProps.celestialName,diaProps.celestialBodyDistance,diaProps.celestialOrbitalFrequency, diaProps.celestialRotationalFrequency, diaProps.celestialBodyDiameter, diaProps.celestialBodyTemperature);
+			
 		}
 
 	}

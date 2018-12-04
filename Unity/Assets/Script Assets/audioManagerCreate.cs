@@ -7,16 +7,16 @@ using UnityEngine.Audio;
 public class audioManagerCreate : MonoBehaviour {
 
 	public AudioMixer systemMixer;
-    public Slider slider;
+    
 
 	// Use this for initialization
-	void Start () 
+	public void generate (int amountOfCelestials) 
 	{	
-		// Find amount of celestials in scene
+		
 	
 		
 		// For each celestial, assign corresponding audio mixer group based on celestialID/i (essentially the same value)
-		for(int i = 0; i < slider.value; i++)
+		for(int i = 0; i < amountOfCelestials; i++)
 		{
 			GameObject celestialObject = GameObject.Find("celestialObject"+i.ToString()).gameObject;
 			string masterMix = "Master";
