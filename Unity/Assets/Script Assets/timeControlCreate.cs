@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class timeControl : MonoBehaviour {
+public class timeControlCreate : MonoBehaviour {
 
 		 
 	
@@ -10,7 +11,7 @@ public class timeControl : MonoBehaviour {
 	public void updateMultiplier(float multiplier)
 	{
 		// Find amount of celestials integer from celestial manager gameobejct.
-		int amountOfCelestials = GameObject.Find("celestialManager").gameObject.GetComponent<celestialObjectInstatiator>().amountOfCelestials;
+		float amountOfCelestials = GameObject.Find("amountSlider").gameObject.GetComponent<Slider>().value;
 		
 
 		for(int i = 0; i < amountOfCelestials; i++)

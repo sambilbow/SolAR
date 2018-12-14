@@ -21,8 +21,8 @@ public class celestialObjectInstantiatorCreator : MonoBehaviour {
 
 			string celestialName = celestialDialogue.Find("celestialName").gameObject.GetComponent<Text>().text;
 			float celestialBodyDistance = celestialDialogue.Find("distanceSlider").gameObject.GetComponent<Slider>().value;
-			float celestialOrbitalFrequency = celestialDialogue.Find("orbitalSlider").gameObject.GetComponent<Slider>().value;
-			float celestialRotationalFrequency = celestialDialogue.Find("rotationalSlider").gameObject.GetComponent<Slider>().value;
+			float celestialOrbitalFrequency = celestialDialogue.Find("orbitalSlider").gameObject.GetComponent<logSlider>().newValue;
+			float celestialRotationalFrequency = celestialDialogue.Find("rotationalSlider").gameObject.GetComponent<logSlider>().newValue;
 			float celestialBodyDiameter = celestialDialogue.Find("diameterSlider").gameObject.GetComponent<Slider>().value;
 			float celestialBodyTemperature = celestialDialogue.Find("temperatureSlider").gameObject.GetComponent<Slider>().value;
 
